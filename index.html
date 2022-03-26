@@ -4,6 +4,18 @@
     <meta charset="utf-8" />
     <title>네이버 로그인</title>
     <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"
+      charset="utf-8"
+    ></script>
+    <script>
+      const naverLogin = new naver.LoginWithNaverId({
+        clientId: "YOUR_CLIENT_ID",
+        callbackUrl: "YOUR_CALLBACK_URL",
+        loginButton: { color: "green", type: 2, height: 40 },
+      });
+      naverLogin.init(); // 로그인 설정
+    </script>
   </head>
   <body>
     <div class="container">
